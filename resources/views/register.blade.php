@@ -165,13 +165,16 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-12 col-sm-8">
+                            <div class="col-xs-12 col-sm-5">
                                 <div class="panel panel-primary">
                                     <div class="panel-heading">File Uploads (If Any)</div>
                                     <input id="file" name="file" type="file" data-show-upload="false"  data-show-preview="false" class="file">
                                 </div>
                             </div>
-                            <div class="col-xs-4 col-xs-offset-4 col-sm-3 col-sm-offset-1" style="margin-top:40px;">
+                            <div class="col-xs-6 col-sm-4">
+                                <center>{!! Recaptcha::render() !!}</center>
+                            </div>
+                            <div class="col-xs-4 col-xs-offset-2 col-sm-offset-1 col-sm-2" style="margin-top:40px;">
                                 <center><input type="submit" class="btn btn-primary" value="Submit Registration"></center>
                             </div>
                         </div>
