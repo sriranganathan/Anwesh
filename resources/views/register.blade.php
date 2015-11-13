@@ -21,6 +21,18 @@
             {
                 background-color: transparent;
             }
+            .vcenter
+            {
+                float: none;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            @media screen and (min-width: 768px) and (max-width: 992px)
+            {
+                #submit_button{
+                    margin-left: 12.5%;
+                }
+            }
         </style>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -165,16 +177,16 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-12 col-sm-5">
+                            <div class="col-xs-12 col-sm-5 vcenter">
                                 <div class="panel panel-primary">
                                     <div class="panel-heading">File Uploads (If Any)</div>
                                     <input id="file" name="file" type="file" data-show-upload="false"  data-show-preview="false" class="file">
                                 </div>
                             </div>
-                            <div class="col-xs-6 col-sm-4">
+                            <div class="col-xs-12 col-sm-4 vcenter">
                                 <center>{!! Recaptcha::render() !!}</center>
                             </div>
-                            <div class="col-xs-4 col-xs-offset-2 col-sm-offset-1 col-sm-2" style="margin-top:40px;">
+                            <div id="submit_button" class="col-xs-12 col-sm-1 vcenter" style="margin-top:20px;">
                                 <center><input type="submit" class="btn btn-primary" value="Submit Registration"></center>
                             </div>
                         </div>
