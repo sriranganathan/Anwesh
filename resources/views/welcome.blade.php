@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Anwesh</title>
+		<title>Ingenium</title>
 		<link type="text/css" rel="stylesheet" href="{{asset('CSS/bootstrap.css')}}"  media="screen,projection"/>
 		<link type="text/css" rel="stylesheet" href="{{asset('CSS/font-awesome.min.css')}}"  media="screen,projection"/>
 		<link type="text/css" rel="stylesheet" href="{{asset('CSS/fileinput.css')}}"  media="screen,projection"/>
@@ -16,10 +16,12 @@
 		{
 			font-size: 18px;
 			line-height: 24px;
+			text-align:justify;
 		}
 		.list_item1
 		{
 			font-size: 17px;
+			text-align:justify;
 		}
 		.vcenter
 		{
@@ -55,13 +57,14 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span> 
 					</button>
-					<a class="navbar-brand" href="{{action('HomeController@index')}}">Anwesh</a>
+					<a class="navbar-brand" href="{{action('HomeController@index')}}">Ingenium</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
 						<li class="clickable active" id="home"><a>Home</a></li>
-						<li class="clickable" id="how"><a>How Anwesh Works</a></li> 
+						<li class="clickable" id="how"><a>How Ingenium Works</a></li> 
 						<li class="clickable" id="rules"><a>Rules</a></li> 
+						<li class="clickable" id="contact"><a>Contact</a></li> 
 						<li id="register"><a href="{{action('HomeController@register')}}">Register</a></li>
 						@if(Session::has('user_name'))
 							<li id="view"><a href="{{action('AdminController@view')}}">View Registrations</a></li>
@@ -94,17 +97,17 @@
 			<div class="row">
 				<div class="col-sm-12 col-md-6 vcenter">
 					<center>
-						<h2>ANWESH 16</h2>
+						<h2>INGENIUM 17</h2>
 					</center>
 
 					<center>
 						<blockquote style="border-left: 0px;">
-							Pragyan’16 presents to you ANWESH, an inter - collegiate technical 
-							exhibition and competition, aimed at presenting a platform for the 
-							students of all colleges to display their ideas and creations and 
-							put on show their inventiveness and technical curiosity to the 
-							outside world. Every spark of an idea is encouraged.
-						</blockquote>
+                                Pragyan&#39;17 will be hosting INGENIUM, the inter – collegiate technical
+exhibition and competition, that serves as a platform for the students of all
+colleges to showcase their ideas and inventions. INGENIUM will provide
+students with an opportunity to exhibit and prove their mettle with ideas in
+every sphere of science and technology.
+											</blockquote>
 					</center>
 				</div>
 				<div class="col-sm-12 col-md-5 vcenter" style="margin-left:7.5%">
@@ -121,9 +124,11 @@
 					</div>
 					<div class="col-md-10">
 						<ul>
-							<li class="list_item">Experience pitching your idea and building a prototype. Exposure by coming in contact with technocrats from across the country and recognition for your idea.</li>
-							<li class="list_item">Internship opportunities with the visiting companies.</li>
-							<li class="list_item">Certificates of participation from Pragyan.</li>
+<li class="list_item">Experience pitching your idea and building a prototype.</li>
+<li class="list_item">Exposure to new innovations and technology, by interacting with technocrats from across the country.</li>
+<li class="list_item">Recognition for your idea.</li>
+<li class="list_item">Internship opportunities with the visiting companies.</li>
+<li class="list_item">Certificate of participation from Pragyan.</li>
 						</ul>
 					</div>
 				</div>
@@ -134,9 +139,9 @@
 					</div>
 					<div class="col-md-10">
 						<ul>
-							<li class="list_item">For the top three innovations in each category</li>
-							<li class="list_item">Circuital: 30k/18k/12k</li>
-							<li class="list_item">Non-Circuital: 30k/18k/12k</li>
+							<li class="list_item">For the top two innovations in each category</li>
+							<li class="list_item">Circuital: 25k/15k</li>
+							<li class="list_item">Non-Circuital: 25k/15k</li>
 						</ul>
 					</div>
 				</div>
@@ -145,7 +150,7 @@
 			<br>
 			<div class="row" id="how_it_works">
 				<div class="col-sm-12 col-md-10 col-md-offset-1">
-					<center><h2>How Anwesh Works?</h2></center>
+					<center><h2>How Ingenium Works?</h2></center>
 					<br>
 					<div class="col-sm-12">
 						<ol>
@@ -157,9 +162,13 @@
 								<li class="list_item1">Original ideas addressing social problems, industrial needs, day-to-day utility or recreation.</li>
 							</ul>
 							<li class="list_item">A panel will scrutinize the idea, and if deemed feasible and worthy, you will be given the green light to pursue the idea.</li>
-							<li class="list_item">The second round will be held in the month of January 2016 wherein all teams will be required to present a comprehensive proposal, work schedule, cost report and justification for the project.</li>
-							<li class="list_item">After systematic reviews, the complete presentation along with the working model/demonstration must be ready by 20th February 2016, following which it will be showcased during Pragyan’16.</li>
+							<li class="list_item">The second round will be held in the month of January 2017 wherein all teams will be required to present a comprehensive proposal, work schedule, cost report and justification for the project.</li>
+							<li class="list_item">After systematic reviews, the complete presentation along with the working model/demonstration must be ready by the last week of February 2017, following which it will be showcased during Pragyan’17.</li>
 						</ol>
+                        <br/>
+                        Ingenium is open exclusively for non NIT-Trichy students.
+						<br/>
+						<p class="list_item1"><a href="{{action('HomeController@register')}}">Click here</a> to register</p>
 					</div>
 				</div>
 			</div>
@@ -173,23 +182,25 @@
 						<div class="list_item">Scientific fraud and misconduct are not condoned at any level of research or during the course of the competition. This includes plagiarism, forgery, use or presentation of other researchers' work as one’s own and fabrication of data. Fraudulent projects will fail to qualify for competition.</div>
 						<h3 class="text-warning">First Round:</h3>
 						<ol>
-							<li class="list_item1">The deadline for the abstract submission is <span class="text-danger" style="font-size:25px;">15th December 2015.</span> Late entries will not be entertained and deadline extensions will not be given.</li>
+							<li class="list_item1">The deadline for the abstract submission is <span class="text-danger" style="font-size:25px;">20<sup>th</sup> December 2016.</span> Late entries will not be entertained.</li>
 							<li class="list_item1">Maximum number of participants in a Team is 4.</li>
-							<li class="list_item1">One student may be a part of more than one team.</li>
-							<li class="list_item1">One team may present more than one project.</li>
-							<li class="list_item1">The members of a team may not be changed during the course of the competition.</li>
+							<li class="list_item1">A team can present more than one project.</li>
+							<li class="list_item1">The members of a team can not be changed during the course of the competition.</li>
 							<li class="list_item1">The idea and contents of the project may not be changed once the abstract is submitted.</li>
-							<li class="list_item1">After you have submitted the abstract, a panel of judges will go through your material and if you are shortlisted for the second round, you will be notified.</li>
+							<li class="list_item1">After you have submitted the abstract, a panel of judges will analyse your proposal and if you are shortlisted for the second round, you will be notified.</li>
 						</ol>
 						<h3 class="text-warning">Second Round:</h3>
 						<ol>
+        <li class="list_item1">Details of this round will be revealed soon.</li>
+                    <!--
 							<li class="list_item1">A PowerPoint presentation containing a detailed description of the project and the progress of the project and a video (duration 3-5 minutes) explaining the same should be mailed to us by <span class="text-danger" style="font-size:25px;">January 20, 2016.</span></li>
-							<li class="list_item1">The student(s) doing the presentation must be the one who conducted the research.</li>
+        <li class="list_item1">The student(s) doing the presentation must be the one who conducted the research.</li>
 							<li class="list_item1">The presentation will be reviewed by a panel of judges and if you are shortlisted for the final round, you will be notified.</li>
+-->
 						</ol>
 						<h3 class="text-warning">Final Round:</h3>
 						<ol>
-							<li class="list_item1">The final working model of the project is to be displayed during Pragyan’16, where it will be judged by a panel of judges and the winners of the circuital and non-circuital projects will be announced.</li>
+							<li class="list_item1">The final working model of the project is to be displayed during Pragyan’17, where it will be judged by a panel of judges and the winners of the circuital and non-circuital projects will be announced.</li>
 							<li class="list_item1">The decision of judges will be final and no arguments or appeal will be entertained.</li>
 							<li class="list_item1">The prize money and number of prizes are subject to change based on the number of registrations for the event.</li>
 							<li class="list_item1">The organizers reserve the right to change/update the rules of the contest at any point of time and will do their best to inform the participants of the same. However, it is ultimately the responsibility of the teams to keep themselves updated. Violation of any rule can result in rejection of project.</li>
@@ -201,7 +212,22 @@
 			</div>
 		</div>
 		<br>
+		<div class="row" id="contacts">
+			<div class="col-sm-12 col-md-10 col-md-offset-1">
+				<center><h2>Contact</h2></center>
 
+				<center>
+					<div class="col-sm-12">
+                        
+                        Abimanyu M - 96299 39133 <br>
+                        Koushik Raghavan - 95001 79320 <br>
+                        
+						ingenium@pragyan.org<br/>
+					</div>
+				</center>
+			</div>
+		</div>
+		<br><br>
 		@include('footer')
 		<script type="text/javascript" src="{{asset('JS/jquery.min.js')}}"></script>
 		<script type="text/javascript" src="{{asset('JS/bootstrap.js')}}"></script>
@@ -210,6 +236,7 @@
 			$("#how").addClass("active");
 			$("#rules").removeClass("active");
 			$("#home").removeClass("active");
+			$("#contact").removeClass("active");
 			$('html, body').animate({
 				'scrollTop' : $("#how_it_works").position().top-50
 			});
@@ -218,6 +245,7 @@
 			$("#rules").addClass("active");
 			$("#how").removeClass("active");
 			$("#home").removeClass("active");
+			$("#contact").removeClass("active");
 			$('html, body').animate({
 				'scrollTop' : $("#rules_block").position().top-50
 			});
@@ -226,8 +254,18 @@
 			$("#home").addClass("active");
 			$("#rules").removeClass("active");
 			$("#how").removeClass("active");
+			$("#contact").removeClass("active");
 			$('html, body').animate({
 				'scrollTop' : $("body").position().top
+			});
+		});
+		$("#contact").on('click',function() {
+			$("#home").removeClass("active");
+			$("#rules").removeClass("active");
+			$("#how").removeClass("active");
+			$("#contact").addClass("active");
+			$('html, body').animate({
+				'scrollTop' : $("#contacts").position().top-50
 			});
 		});
 

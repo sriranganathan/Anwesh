@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Anwesh Registration</title>
+        <title>Ingenium Registration</title>
         <link type="text/css" rel="stylesheet" href="{{asset('CSS/bootstrap.css')}}"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="{{asset('CSS/fileinput.css')}}"  media="screen,projection"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -180,7 +180,7 @@
                             <div class="col-xs-12 col-sm-5 vcenter">
                                 <div class="panel panel-primary">
                                     <div class="panel-heading">File Uploads (If Any)</div>
-                                    <input id="file" name="file" type="file" data-show-upload="false"  data-show-preview="false" class="file">
+                                    <input id="file" accept="application/pdf" name="file" type="file" data-show-upload="false"  data-show-preview="false" class="file">
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-4 vcenter">
