@@ -23,6 +23,6 @@ body {
 
 <footer class="footer">
     <div class="container">
-      <center><p>Made with ♥ by Delta Force</p></center>
+      <center><p>Made with ♥ by <a href="https://delta.nitt.edu">Delta Force</a></p></center>
     </div>
 </footer>
