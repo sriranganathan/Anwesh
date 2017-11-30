@@ -61,7 +61,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span> 
 					</button>
-					<a class="navbar-brand" href="{{action('HomeController@index')}}">Ingenium</a>
+					<a class="navbar-brand" style="margin:0;margin-right:15px;padding:0" href="{{action('HomeController@index')}}"><img style="height:100%" src="{{asset('pragyan.png')}}"/></a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
@@ -131,7 +131,7 @@ is one of the largest inter-collegiate student-run techno-managerial fest and th
 						</ul>
 					</div>
 				</div>
-				<div class="col-sm-12 col-md-5 col-md-offset-1">
+				<div class="col-sm-12 col-md-6">
 					<center><h3>Prize Money</h3></center>
 					<div class="col-md-2">
 						<center><i class="fa fa-trophy fa-5x"></i></center>
@@ -139,9 +139,16 @@ is one of the largest inter-collegiate student-run techno-managerial fest and th
 					<div class="col-md-10">
 						<ul>
 							<li class="list_item">For the top two innovations in each category</li>
-							<li class="list_item">Circuital: 25k/15k</li>
-							<li class="list_item">Non-Circuital: 25k/15k</li>
+						<ul style="font-size:15px">	<li>Circuital: 25,000/15,000 INR</li>
+							<li>Non-Circuital: 25,000/15,000 INR</li>
 						</ul>
+						<li class="list_item">Additionally, for all shortlisted finalists:
+<ul style="font-size:15px">
+	<li>Circuital: Prize Money worth up to 30,000 INR</li>
+	<li>Non-Circuital: Prize Money worth up to 30,000 INR</li>
+</ul>
+</li>
+</ul>
 					</div>
 				</div>
 			</div>
@@ -157,12 +164,12 @@ is one of the largest inter-collegiate student-run techno-managerial fest and th
 							<ul>
 								<li class="list_item1">Must be within the realm of Science and technology.</li>
 								<li class="list_item1">The result of the project must be a tangible product or a demonstrable service.</li>
-								<li class="list_item1">Must be presentable during Pragyan as a working model or demonstration along with visual aids (Charts, Visual Aids, etc.)</li>
+								<li class="list_item1">Must be presentable during Pragyan as a working model or demonstration along with visual aids (Charts, Presentations, etc.)</li>
 								<li class="list_item1">Must be original, addressing social problems, industrial needs, day-to-day utility or recreation.</li>
 							</ul>
 							<li class="list_item">A panel will scrutinize the idea, and if deemed feasible and worthy, you will be given the green light to pursue the idea.</li>
-							<li class="list_item">The second round will be held in the month of January 2018 wherein all teams will be required to present a comprehensive proposal, work schedule, cost report and justification for the project.</li>
-							<li class="list_item">After systematic reviews, the complete presentation along with the working model/demonstration must be ready by the last week of February 2018, following which it will be showcased during Pragyan ’18.</li>
+							<li class="list_item">The second round will be held on 22<sup>nd</sup> January 2018 wherein all teams will be required to present a comprehensive proposal, work schedule, cost report and justification for the project.</li>
+							<li class="list_item">After systematic reviews, the complete presentation along with the working model/demonstration must be ready by the last week of February 2018, following which it will be showcased during Pragyan '18.</li>
 						</ol>
                         <br/>
                         Ingenium is open exclusively for non NIT-Trichy students.
@@ -178,7 +185,7 @@ is one of the largest inter-collegiate student-run techno-managerial fest and th
 					<center><h2>Rules</h2></center>
 					<br>
 					<div class="col-sm-12">
-						<div class="list_item">Scientific fraud and misconduct are not condoned at any level of research or during the course of the competition. This includes plagiarism, forgery, use or presentation of other researchers' work as one’s own and fabrication of data. Fraudulent projects will fail to qualify for competition.</div>
+						<div class="list_item">Scientific fraud and misconduct are not condoned at any level of research or during the course of the competition. This includes plagiarism, forgery, use or presentation of other researchers' work as one's own and fabrication of data. Fraudulent projects will fail to qualify for competition.</div>
 						<ul>
 							<li class="list_item1">The decision of judges will be final and no arguments or appeal will be entertained.</li>
 							<li class="list_item1">The organizers reserve the right to change/update the rules of the contest at any point of time and will do their best to inform the participants of the same. However, it is ultimately the responsibility of the teams to keep themselves updated. Violation of any rule can result in rejection of the project.
@@ -189,21 +196,20 @@ is one of the largest inter-collegiate student-run techno-managerial fest and th
 						<h3 class="text-warning">First Round:</h3>
 						<ol>
 							<li class="list_item1">The deadline for the abstract submission is <span class="text-danger" style="font-size:25px;">20<sup>th</sup> December 2017.</span> Late entries will not be entertained.</li>
-							<li class="list_item1">Maximum number of participants in a Team is 4.</li>
+							<li class="list_item1">Maximum number of participants in a team is 4.</li>
 							<li class="list_item1">A team can present more than one project.</li>
 							<li class="list_item1">The members of a team can not be changed during the course of the competition.</li>
 							<li class="list_item1">The idea and contents of the project may not be changed once the abstract is submitted.</li>
 							<li class="list_item1">After you have submitted the abstract, a panel of judges will analyse your proposal and if you are shortlisted for the second round, you will be notified.</li>
 						</ol>
 						<h3 class="text-warning">Second Round:</h3>
-						Specific details of this round will be revealed soon.
-                <!-- <ol> -->
-                    <!--
-							<li class="list_item1">A PowerPoint presentation containing a detailed description of the project and the progress of the project and a video (duration 3-5 minutes) explaining the same should be mailed to us by <span class="text-danger" style="font-size:25px;">January 20, 2016.</span></li>
-        <li class="list_item1">The student(s) doing the presentation must be the one who conducted the research.</li>
+		
+                <ol> 
+                    
+							<li class="list_item1">A PowerPoint presentation containing a detailed description of the project and the progress of the project and a video (duration 3-5 minutes) explaining the same should be submitted through the Ingenium website on or before <span class="text-danger" style="font-size:25px;">22<sup>nd</sup> January 2018.</span></li>
+        <li class="list_item1">The student(s) doing the presentation must be the one(s) who conducted the research.</li>
 							<li class="list_item1">The presentation will be reviewed by a panel of judges and if you are shortlisted for the final round, you will be notified.</li>
--->
-						<!-- </ol> -->
+						 </ol> 
 						<h3 class="text-warning">Final Round:</h3>
 						<ol>
 							<li class="list_item1">The final working model of the project is to be displayed during Pragyan ’18, where it will be judged by a panel of judges and the winners of the circuital and non-circuital categories will be announced.</li>

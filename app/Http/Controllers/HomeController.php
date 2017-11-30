@@ -9,6 +9,8 @@ use App\Registration as Registration;
 
 use Log;
 use Validator;
+use Exception;
+use DB;
 
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
@@ -79,6 +81,7 @@ class HomeController extends Controller
 
         try
         {
+	DB::beginTransaction();
         $registration                       = new Registration();
         $registration->email_1              = $request->email1;
         $registration->name_1               = $request->name1;
@@ -117,19 +120,20 @@ class HomeController extends Controller
         
         $registration->save();
 
-        if($request->file)
-        {
+        
+        
             $destinationPath = base_path() . '/Upload/'; // upload path
             $extension = $request->file('file')->getClientOriginalExtension(); // getting file extension
             $fileName = $registration->id .'.'.$extension; // renameing image
             $request->file('file')->move($destinationPath, $fileName);
-            $registration->file_name = $fileName;
+            $registration->file_name = $request->file('file')->getClientOriginalName();
             $registration->save();
-        }
+        DB::commit();
             return view('success');
         }
         catch(Exception $e) {
             Log::error($e);
+		DB::rollBack();
             return view('error');
         }
     }
