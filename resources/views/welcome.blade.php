@@ -5,6 +5,8 @@
 		<link type="text/css" rel="stylesheet" href="{{asset('CSS/bootstrap.css')}}"  media="screen,projection"/>
 		<link type="text/css" rel="stylesheet" href="{{asset('CSS/font-awesome.min.css')}}"  media="screen,projection"/>
 		<link type="text/css" rel="stylesheet" href="{{asset('CSS/fileinput.css')}}"  media="screen,projection"/>
+		<meta name="keywords" content="Ingenium,Pragyan,Pragyan 2018,Pragyan 18,NIT,NITT,Trichy, exhibition,competition,technical" />
+		<meta name="description" content="Pragyan '18 presents to you INGENIUM, the inter–collegiate technical exhibition and competition, that serves as a platform for college students to showcase their ideas and inventions. Come, prove your mettle in this battle of wits and technology!" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 		<meta name="_token" content="{{ csrf_token() }}"/>
 		<style type="text/css">

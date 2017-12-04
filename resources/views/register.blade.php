@@ -79,10 +79,7 @@
                                         </div>
                                     </div>
                                     <br/>
-                                    <div class="input-group">
-                                        <span class="input-group-addon" style="width:41%" id="project-abstract-addon">Abstract </span>
-                                        <input id="file" accept="application/pdf" name="file" type="file" aria-describedby="project-abstract-addon" data-show-upload="false"  data-show-preview="false" class="file" required>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>

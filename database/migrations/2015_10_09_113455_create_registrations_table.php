@@ -47,7 +47,7 @@ class CreateRegistrationsTable extends Migration
             $table->string('state_4',255)->nullable();
             $table->bigInteger('contact_number_4')->nullable();
             
-            $table->string('file_name',255);
+            $table->string('file_name',255)->nullable();
             $table->string('project_name',255);
             $table->enum('project_category',['c','nc'])->default('c');
             

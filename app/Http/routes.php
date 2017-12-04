@@ -13,6 +13,8 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/register','HomeController@register');
+Route::get('abstract','HomeController@fileUploadView');
+Route::post('abstract','HomeController@fileUpload');
 Route::post('submit','HomeController@store');
 Route::get('login','AdminController@login');
 Route::post('login','AdminController@check_login');
