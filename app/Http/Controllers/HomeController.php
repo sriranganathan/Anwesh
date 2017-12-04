@@ -135,7 +135,7 @@ class HomeController extends Controller
             $mail->to      = $registration->email_1;
             $mail->from    = 'no-reply@pragyan.org';
             $mail->subject = 'Ingenium - Pragyan 2018';
-            $mail->content = View::make("email",['link'=>$link])->render();
+            $mail->content = View::make("email",['link'=>$link,'name'=>$registration->name_1])->render();
             $mail->attachment = null;
 
             $this->dispatch(new SendMailSG($mail));
