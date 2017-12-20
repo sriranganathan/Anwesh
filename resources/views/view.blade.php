@@ -30,6 +30,8 @@
                         <thead>
                             <tr>
                                 <th>Registration id</th>
+                                <th>Project Name</th>
+                                <th>Project Category</th>
                                 <th>Team Leader (Name)</th>
                                 <th>Team Leader (Email-ID)</th>
                                 <th>Team leader (Contact No)</th>
@@ -40,6 +42,12 @@
                             @foreach($registrations as $registration)
                                 <tr id="{{$registration->id}}">
                                     <td>{{$registration->id}}</td>
+                                    <td>{{$registration->project_name}}</td>
+                                    @if($registration->project_category === "c" )
+                                    <td>Circuital</td>
+                                    @else
+                                    <td>Non-Circuital</td>
+                                    @endif
                                     <td>{{$registration->name_1}}</td>
                                     <td>{{$registration->email_1}}</td>                                    
                                     <td>{{$registration->contact_number_1}}</td>
