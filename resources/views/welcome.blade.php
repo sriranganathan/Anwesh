@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ingenium</title>
+		<title>Ingenium - Pragyan 2018</title>
 		<link type="text/css" rel="stylesheet" href="{{asset('CSS/bootstrap.css')}}"  media="screen,projection"/>
 		<link type="text/css" rel="stylesheet" href="{{asset('CSS/font-awesome.min.css')}}"  media="screen,projection"/>
 		<link type="text/css" rel="stylesheet" href="{{asset('CSS/fileinput.css')}}"  media="screen,projection"/>
@@ -197,7 +197,7 @@ is one of the largest inter-collegiate student-run techno-managerial fest and th
 						</ul>
 						<h3 class="text-warning">First Round:</h3>
 						<ol>
-							<li class="list_item1">The deadline for the abstract submission is <span class="text-danger" style="font-size:25px;">20<sup>th</sup> December 2017.</span> Late entries will not be entertained.</li>
+							<li class="list_item1">The deadline for the abstract submission is <span class="text-danger" style="font-size:25px;">30<sup>th</sup> December 2017.</span> Late entries will not be entertained.</li>
 							<li class="list_item1">Maximum number of participants in a team is 4.</li>
 							<li class="list_item1">A team can present more than one project.</li>
 							<li class="list_item1">The members of a team can not be changed during the course of the competition.</li>

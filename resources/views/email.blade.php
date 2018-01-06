@@ -40,7 +40,7 @@
 															
 															<p>Dear {{$name}},<br/></p>
 															<p>Greetings from Pragyan!<br/></p>
-															<p>You have successfully completed your provisional registration for Ingenium - Pragyan '18. Kindly submit your abstract in the link provided below by 20th December 2017 to confirm your entry into the inter-collegiate exhibition and competition.<br/><p>
+															<p>You have successfully completed your provisional registration for Ingenium - Pragyan '18. Kindly submit your abstract in the link provided below by 30th December 2017 to confirm your entry into the inter-collegiate exhibition and competition.<br/><p>
 																<a style="cursor: pointer;" href="{{$link}}"><button style="cursor: pointer; color: #fff; background-color: #d01c68; cursor: pointer;border-color: #d01c68; border-radius: 2px; border-width: 2px; text-transform: uppercase; min-width: 195px; max-width: 250px; font-size: 14px; font-weight: 600; letter-spacing: .8px; padding: 10px 16px; line-height: 1.3333333; ">Submit Abstract</button></a><br/><br/>
 																We look forward to witnessing your creative ideas coming to life in Pragyan '18.<br/>
 																Let's Celebrate Technology!
