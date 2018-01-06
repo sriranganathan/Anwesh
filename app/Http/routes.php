@@ -12,13 +12,23 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/register','HomeController@register');
-Route::get('abstract','HomeController@fileUploadView');
-Route::post('abstract','HomeController@fileUpload');
-Route::post('submit','HomeController@store');
+
 Route::get('login','AdminController@login');
 Route::post('login','AdminController@check_login');
+
 Route::get('logout','AdminController@logout');
+
+Route::get('register','HomeController@register');
+Route::post('submit','HomeController@store');
+
+// Phase 1
+Route::get('abstract','HomeController@fileUploadView');
+Route::post('abstract','HomeController@fileUpload');
+
+// Phase 2
+Route::get('phase2','HomeController@phaseTwoView');
+Route::post('phase2','HomeController@phaseTwo');
+
 
 Route::group(['middleware' => 'AdminAuth'], function () {
 	Route::get('view_registration',"AdminController@view");

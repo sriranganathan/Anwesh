@@ -157,14 +157,14 @@ class HomeController extends Controller
 
 		if($validator->fails())
 		{
-			abort(500);
+			abort(400);
 		}
 
 		$uniq_id = $request->input('t');
 		$registration = Registration::where('uniq_id', $uniq_id)->first();
 
 		if(!$registration) {
-			abort(500);
+			abort(400);
 		}
 		
 		return view('upload',['project_name'=>$registration->project_name,'name'=>$registration->name_1,'email'=>$registration->email_1,'uniq_id'=>$uniq_id]);
@@ -214,4 +214,74 @@ class HomeController extends Controller
 		}
 	}
 
+	public function phaseTwoView(Request $request) 
+	{
+		$validator = Validator::make($request->all(),[
+			't' => 'required',
+		]);
+
+		if($validator->fails())
+		{
+			abort(400);
+		}
+
+		$uniq_id = $request->input('t');
+		$registration = Registration::where('uniq_id', $uniq_id)->first();
+
+		if(!$registration||((int)$registration->phase2)!=1) {
+			abort(400);
+		}
+		
+		return view('phaseTwo',['project_name'=>$registration->project_name,'project_category'=>$registration->project_category,'name'=>$registration->name_1,'email'=>$registration->email_1,'college'=>$registration->college_1,'uniq_id'=>$uniq_id]);
+	}
+
+	public function phaseTwo(Request $request)
+	{
+		$validator = Validator::make($request->all(),[
+			't'    		   => 'required',
+			'video_link'   => 'required|url',
+			'presentation' => 'required|max:15360|mimes:pdf,ppt,pptx',
+			'g-recaptcha-response'  => 'required|recaptcha'
+		]);
+
+		if($validator->fails())
+		{
+			Log::error('Unable to submit presentation');
+			return back()->withErrors($validator);
+		}
+
+		$uniq_id = $request->input('t');
+
+		try
+		{
+			DB::beginTransaction();
+
+			$registration = Registration::where('uniq_id', $uniq_id)->first();
+
+			if(!$registration||((int)$registration->phase2)!=1) {
+				Log::error('Unable to submit presentation');
+				return back()->with('error','Invalid ID');
+			}
+
+			$video_link = $request->input('video_link'); 
+
+			$destinationPath = base_path() . '/Upload/'; // upload path
+			$extension = $request->file('presentation')->getClientOriginalExtension(); // getting file extension
+			$fileName = "phase2_".$registration->id.'.'.$extension; // renaming image
+			$request->file('presentation')->move($destinationPath, $fileName);
+			$registration->presentation = $request->file('presentation')->getClientOriginalName();
+			$registration->video_link = $video_link;
+			$registration->save();
+
+			DB::commit();
+			Log::info("Presentation submitted successfully by $registration->id");
+			return view('success_presentation');
+		}
+		catch(Exception $e)
+		{
+			DB::rollBack();
+			Log::error('Unable to submit abstract',['error'=>$e]);
+			abort(500);
+		}
+	}
 }
