@@ -30,7 +30,10 @@ class HomeController extends Controller
 
 	public function register()
 	{
-		 return view('register');
+		// return view('register');
+
+		//Closing Registrations
+		return redirect(url('/'));
 	}
 
 	public function store(Request $request)
